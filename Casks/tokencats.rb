@@ -14,7 +14,7 @@ cask "tokencats" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "TokenCats.app"
 
@@ -28,8 +28,8 @@ cask "tokencats" do
   # Only paths TokenCats alone uses. Hooks and the status line in ~/.claude and ~/.codex are removed from the
   # app (Settings › Agents › disconnect), never by zap.
   zap trash: [
+    "~/.tokencats",
     "~/Library/Application Support/TokenCats",
     "~/Library/Preferences/io.github.changchangwoo.tokencats.plist",
-    "~/.tokencats",
   ]
 end
