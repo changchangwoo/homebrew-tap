@@ -1,10 +1,8 @@
 # Homebrew cask for changchangwoo/homebrew-tap (Casks/tokencats.rb). scripts/package-release.sh fills in
 # VERSION and SHA256; see docs/setup/release.md for why each part is here.
-# Homebrew cask for changchangwoo/homebrew-tap (Casks/tokencats.rb). scripts/package-release.sh fills in
-# VERSION and SHA256; see docs/setup/release.md for why each part is here.
 cask "tokencats" do
-  version "0.1.2"
-  sha256 "ccfba2b3af5bc0bb88fd1cf2313b2f5afe6fbf37f71fec2445032e0341cdb0f3"
+  version "0.1.3"
+  sha256 "fb307f53e9a7bcf41c40ad9909ca453642b8601881dcc98eb40459f2d8af0027"
 
   url "https://github.com/changchangwoo/TokenCats/releases/download/v#{version}/TokenCats-#{version}.zip"
   name "TokenCats"
@@ -17,6 +15,9 @@ cask "tokencats" do
   end
 
   depends_on macos: :sonoma
+
+  # The app updates itself through Sparkle, so `brew upgrade` skips it unless run with --greedy.
+  auto_updates true
 
   app "TokenCats.app"
 
