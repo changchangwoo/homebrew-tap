@@ -1,8 +1,10 @@
 # Homebrew cask for changchangwoo/homebrew-tap (Casks/tokencats.rb). scripts/package-release.sh fills in
 # VERSION and SHA256; see docs/setup/release.md for why each part is here.
+# Homebrew cask for changchangwoo/homebrew-tap (Casks/tokencats.rb). scripts/package-release.sh fills in
+# VERSION and SHA256; see docs/setup/release.md for why each part is here.
 cask "tokencats" do
-  version "0.1.0"
-  sha256 "56d7244b54ebed754c3a16c6668b7120545324c67381af0538f27a590056c136"
+  version "0.1.1"
+  sha256 "f27ca61e4b4627a48ff879ec30237dc932883a99266ec516310cbf768b2ea429"
 
   url "https://github.com/changchangwoo/TokenCats/releases/download/v#{version}/TokenCats-#{version}.zip"
   name "TokenCats"
